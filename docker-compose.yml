@@ -1,0 +1,64 @@
+version: '3.8'
+
+services:
+  # MySQL Database
+  mysql:
+    image: mysql:8.0
+    container_name: portfolio_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 432980146416
+      MYSQL_DATABASE: petfinder_db
+      MYSQL_USER: portfolio_user
+      MYSQL_PASSWORD: portfolio_pass
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./backend/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - portfolio_network
+    restart: unless-stopped
+
+  # Spring Boot Backend
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: portfolio_backend
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/petfinder_db
+      SPRING_DATASOURCE_USERNAME: portfolio_user
+      SPRING_DATASOURCE_PASSWORD: portfolio_pass
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+    ports:
+      - "8091:8091"
+    volumes:
+      - ./backend/uploads:/app/uploads
+    depends_on:
+      - mysql
+    networks:
+      - portfolio_network
+    restart: unless-stopped
+
+  # React Frontend
+  frontend:
+    build:
+      context: ./personal-portfolio-frontend
+      dockerfile: Dockerfile
+    container_name: portfolio_frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - portfolio_network
+    restart: unless-stopped
+
+volumes:
+  mysql_data:
+
+networks:
+  portfolio_network:
+    driver: bridge
+
+

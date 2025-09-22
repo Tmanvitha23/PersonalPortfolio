@@ -1,0 +1,89 @@
+/* Apply background color to the entire page */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #0e0afc; /* Blue background */
+  font-family: 'Arial', sans-serif;
+}
+
+/* Admin Login Container */
+.admin-login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #080808; /* Blue background */
+}
+
+/* Admin Login Form */
+.admin-login-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 300px;
+}
+
+/* Form Title */
+.admin-login-form h2 {
+  color: #007bff; /* Blue color for the title */
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Input Fields */
+.admin-login-form input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Input Focus */
+.admin-login-form input:focus {
+  outline: none;
+  border-color: #0056b3; /* Darker blue on focus */
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+/* Submit Button */
+.admin-login-form button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #0056b3; /* Dark blue button */
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+/* Button Hover */
+.admin-login-form button:hover {
+  background-color: #003f7f; /* Even darker blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-login-form {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .admin-login-form h2 {
+    font-size: 1.5rem;
+  }
+
+  .admin-login-form input {
+    font-size: 0.9rem;
+  }
+
+  .admin-login-form button {
+    font-size: 0.9rem;
+  }
+}

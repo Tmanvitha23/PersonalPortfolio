@@ -1,0 +1,113 @@
+/* Main Container */
+.user-profile-container {
+  padding: 3rem 1rem;
+  background-color: #f0f4f8; /* Light background color */
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  margin-top: 4rem; /* Add margin to prevent content from going under the navbar */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Title */
+.profile-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff7f50; /* Coral orange color */
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Main Profile Layout */
+.profile-main {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+/* Left Side: Profile Picture and User Details */
+.profile-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Profile Card with Image */
+.profile-card {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.profile-image-large {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.profile-photo-placeholder {
+  width: 150px;
+  height: 150px;
+  background-color: #ff7f50;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+.username-display {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: bold;
+}
+
+/* User Details Card */
+.user-details-card {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-details-card div {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Right Side: Pet Donation Info */
+.profile-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Pet Donation Info Card */
+.pets-info-card {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pets-info-card h3 {
+  font-size: 1.8rem;
+  color: #ff7f50;
+  margin-bottom: 1rem;
+}
+
+.pets-info-card p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}

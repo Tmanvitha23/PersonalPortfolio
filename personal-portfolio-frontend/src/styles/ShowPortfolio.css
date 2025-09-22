@@ -1,0 +1,179 @@
+/* Apply to body or main wrapper */
+body {
+  margin-top: 4rem; /* Adjust this value to move the content down */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8fafc;
+  padding-top: 4rem; /* Optional: adds space to the top of the body */
+}
+
+/* Alternatively, if you have a main wrapper element */
+.main-wrapper {
+  margin-top: 4rem; /* Adjust this value as needed */
+}
+
+/* Main container styling */
+.p-6.max-w-4xl.mx-auto.space-y-6 {
+  padding: 1.5rem;
+  max-width: 64rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8fafc;
+  overflow-x: hidden;
+  margin-top: 100px; /* Moves the entire content down by 100px */
+}
+
+/* Header Section */
+.text-center h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #48CFCB;
+  margin-bottom: 0.5rem;
+}
+
+.text-center p {
+  color: #4b5563;
+  font-size: 1.125rem;
+}
+
+/* Generic Card Container */
+.card-container {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+
+  /* Overflow fix */
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+/* Add custom scrollbar (optional for better UX) */
+.card-container::-webkit-scrollbar {
+  width: 6px;
+}
+.card-container::-webkit-scrollbar-thumb {
+  background-color: #48CFCB;
+  border-radius: 4px;
+}
+.card-container::-webkit-scrollbar-track {
+  background-color: #f1f5f9;
+}
+
+/* Card Titles */
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #1f2937;
+}
+
+/* Profile Image */
+.card-container img {
+  width: 8rem;
+  height: 8rem;
+  object-fit: cover;
+  border-radius: 9999px;
+  display: block;
+  margin: 0 auto 1rem;
+  border: 3px solid #48CFCB;
+}
+
+/* Center Text */
+.card-container h2 {
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card-container p {
+  margin-top: 0.25rem;
+  color: #4b5563;
+  text-align: left; /* change from center to left */
+  word-wrap: break-word; /* ensures long words wrap */
+  white-space: normal;    /* ensures text wraps normally */
+  line-height: 1.5;       /* improves readability */
+}
+
+/* List Styling */
+ul.list-disc {
+  padding-left: 1.25rem;
+  color: #374151;
+}
+
+ul.list-disc li {
+  margin-bottom: 0.5rem;
+}
+
+/* Links */
+a {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #2563eb;
+}
+
+/* Skill Bar */
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
+.flex.justify-between {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+  color: #1f2937;
+}
+
+.w-full.bg-gray-200.rounded.h-3 {
+  width: 100%;
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+  height: 0.75rem;
+  overflow: hidden;
+}
+
+.bg-\[\#48CFCB\].h-3.rounded {
+  background-color: #48CFCB;
+  height: 0.75rem;
+  border-radius: 9999px;
+}
+
+/* Paragraph inside experience */
+.card-container p {
+  margin-top: 0.25rem;
+  color: #4b5563;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .p-6.max-w-4xl.mx-auto.space-y-6 {
+    padding: 1rem;
+  }
+
+  .text-center h1 {
+    font-size: 1.75rem;
+  }
+
+  .card-title {
+    font-size: 1.125rem;
+  }
+
+  .card-container img {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
+/* Optional Loading Text */
+.text-center.text-gray-500.mt-10 {
+  text-align: center;
+  color: #6b7280;
+  margin-top: 2.5rem;
+}

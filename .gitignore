@@ -1,0 +1,21 @@
+﻿# Node
+personal-portfolio-frontend/node_modules/
+**/node_modules/
+
+# Vite build
+personal-portfolio-frontend/dist/
+**/dist/
+
+# Java/Maven
+backend/target/
+**/target/
+*.class
+
+# Uploads and logs
+backend/uploads/
+*.log
+
+# Env files
+.env
+**/.env
+

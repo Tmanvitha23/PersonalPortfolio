@@ -1,0 +1,204 @@
+/* Home.css */
+
+/* General Styles */
+.home {
+  margin-top: 70px;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Hero Section with Background Image */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+  background-image: url('/src/assets/portfolio-banner.jpg'); /* Set the image here */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 2rem; /* Adjust padding for better visibility */
+  border-radius: 10px;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 500px;
+  z-index: 1;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  color: #58a6ff;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: #8b949e;
+  margin-bottom: 2rem;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: center;
+  z-index: 1;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
+}
+
+/* Features Section */
+.features {
+  text-align: center;
+  margin: 4rem 0;
+}
+
+.features h2 {
+  font-size: 2rem;
+  color: #58a6ff;
+  margin-bottom: 2rem;
+}
+
+.feature-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.feature {
+  background-color: #161b22;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 280px;
+  transition: transform 0.3s;
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+}
+
+.feature img {
+  width: 60px;
+  margin-bottom: 1rem;
+}
+
+.feature h3 {
+  font-size: 1.5rem;
+  color: #58a6ff;
+  margin-bottom: 0.5rem;
+}
+
+.feature p {
+  font-size: 1rem;
+  color: #8b949e;
+}
+
+/* How It Works Section */
+.how-it-works {
+  margin: 4rem 0;
+  text-align: center;
+}
+
+.how-it-works h2 {
+  font-size: 2rem;
+  color: #58a6ff;
+  margin-bottom: 2rem;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.step {
+  background-color: #161b22;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 250px;
+}
+
+.step h3 {
+  font-size: 1.5rem;
+  color: #58a6ff;
+  margin-bottom: 0.5rem;
+}
+
+.step p {
+  font-size: 1rem;
+  color: #8b949e;
+}
+
+/* FAQ Section */
+.faq {
+  padding: 50px 0;
+  text-align: center;
+  background-color: #000;
+}
+
+.faq-items {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.faq-item {
+  width: 30%;
+  background-color: #161b22;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.faq-item:hover {
+  transform: translateY(-10px);
+}
+
+.faq-item h3 {
+  font-size: 20px;
+  color: #58a6ff;
+  margin-bottom: 10px;
+}
+
+.faq-item p {
+  font-size: 16px;
+  color: #c9d1d9;
+}
+
+/* Final Call-to-Action */
+.final-cta {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.final-cta h2 {
+  font-size: 2.5rem;
+  color: #58a6ff;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background-color: #58a6ff;
+  color: #0d1117;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #1f6feb;
+}

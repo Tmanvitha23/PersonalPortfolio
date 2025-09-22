@@ -1,0 +1,31 @@
+# Use OpenJDK 17 as base image
+FROM openjdk:17-jdk-slim
+
+# Install Maven
+RUN apt-get update && apt-get install -y maven && rm -rf /var/lib/apt/lists/*
+
+# Set working directory
+WORKDIR /app
+
+# Copy pom.xml first for better caching
+COPY pom.xml .
+
+# Download dependencies (this layer will be cached if pom.xml doesn't change)
+RUN mvn dependency:go-offline -B
+
+# Copy source code
+COPY src ./src
+
+# Build the application
+RUN mvn clean package -DskipTests
+
+# Create uploads directory
+RUN mkdir -p /app/uploads
+
+# Expose port
+EXPOSE 8091
+
+# Run the application
+CMD ["java", "-jar", "target/petadoptoin-0.0.1-SNAPSHOT.jar"]
+
+

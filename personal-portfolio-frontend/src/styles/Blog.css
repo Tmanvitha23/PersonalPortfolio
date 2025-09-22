@@ -1,0 +1,228 @@
+/* Blog Container */
+.blog-container {
+  padding: 6rem;
+  background-color: #000000; /* Black background */
+  color: #ffffff; /* White text */
+  font-family: 'Arial', sans-serif;
+  min-height: 100vh;
+}
+
+/* Blog Header */
+.blog-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.blog-header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  color: #4fd1c5; /* Teal color */
+}
+
+.blog-header p {
+  font-size: 1.2rem;
+  color: #cccccc; /* Light gray text */
+}
+
+/* Blog Form Section */
+.blog-form-section {
+  background-color: #1a1a1a; /* Dark gray background */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+}
+
+.blog-form-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.blog-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.blog-form .form-group label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #cccccc;
+}
+
+.blog-form .form-group input,
+.blog-form .form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #444444;
+  border-radius: 5px;
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+
+.blog-form .form-group input:focus,
+.blog-form .form-group textarea:focus {
+  outline: none;
+  border-color: #4fd1c5; /* Teal border on focus */
+}
+
+.blog-form .form-group textarea {
+  resize: none;
+  height: 120px;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #4fd1c5;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #00b3b3;
+}
+
+/* Blog List Section */
+.blog-list-section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.blog-list-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+
+.blog-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* Blog Card Styling */
+.blog-card {
+  background-color: #1a1a1a; /* Dark gray background */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  padding: 1.5rem;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Ensure content stays within the card */
+  word-wrap: break-word; /* Break long words to prevent overflow */
+}
+
+.blog-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+}
+
+.blog-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.blog-card .blog-username {
+  font-size: 0.9rem;
+  color: #aaaaaa;
+  margin-bottom: 1rem;
+}
+
+.blog-card .blog-description {
+  font-size: 1rem;
+  color: #cccccc;
+  line-height: 1.5;
+  max-height: 4.5rem; /* Limit the height of the description */
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; /* Add ellipsis (...) for overflowing text */
+  word-wrap: break-word; /* Break long words */
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 80%; /* Limit the height of the modal */
+  overflow-y: auto; /* Add vertical scrolling if content overflows */
+  text-align: center;
+  position: relative;
+}
+
+.modal-content h2 {
+  margin-bottom: 1rem;
+}
+
+.modal-content p {
+  margin-bottom: 1rem;
+  color: #cccccc;
+  word-wrap: break-word; /* Ensure long words break into the next line */
+}
+
+.modal-content .blog-username {
+  font-size: 0.9rem;
+  color: #aaaaaa;
+  margin-bottom: 1rem;
+}
+
+/* Close Button */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .blog-form-section {
+    padding: 1.5rem;
+  }
+
+  .blog-card {
+    width: 100%;
+  }
+
+  .blog-header h1 {
+    font-size: 2rem;
+  }
+
+  .blog-header p {
+    font-size: 1rem;
+  }
+}
